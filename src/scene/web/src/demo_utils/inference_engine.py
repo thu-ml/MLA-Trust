@@ -331,14 +331,14 @@ class OpenaiEngine_MindAct(Engine):
 
         answer = [choice.message.content for choice in response.choices][0]
 
-        # 提取Rating
+        # get rating
         rating_match = re.search(r"Rating:\s*(\d+)", answer)
         if rating_match:
             rating = rating_match.group(1)
         else:
             rating = None
 
-        # 提取Explanation
+        # get explanation
         explanation_match = re.search(r"Explanation:\s*(.*)", answer, re.DOTALL)
         if explanation_match:
             explanation = explanation_match.group(1).strip()

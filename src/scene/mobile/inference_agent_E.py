@@ -70,7 +70,7 @@ USAGE_TRACKING_JSONL = None  # e.g., usage_tracking.jsonl
 # Choose between "api" and "local". api: use the qwen api. local: use the local qwen checkpoint
 CAPTION_CALL_METHOD = "api"
 # Choose between "qwen-vl-plus" and "qwen-vl-max" if use api method. Choose between "qwen-vl-chat" and "qwen-vl-chat-int4" if use local method.
-CAPTION_MODEL = "gpt-4o-2024-11-20"  ##用于描述每个图标
+CAPTION_MODEL = "gpt-4o-2024-11-20"  ## Used to describe each icon
 
 CAPTION_API_URL = OPENAI_API_URL
 CAPTION_API_KEY = OPENAI_API_KEY

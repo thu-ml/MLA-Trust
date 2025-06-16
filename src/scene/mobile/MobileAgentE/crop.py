@@ -4,9 +4,6 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw
 
-# import clip
-# import torch
-
 
 def crop_image(img, position):
     def distance(x1, y1, x2, y2):

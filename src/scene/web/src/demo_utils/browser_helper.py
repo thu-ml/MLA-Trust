@@ -20,10 +20,10 @@ import re
 import socket
 import subprocess
 from difflib import SequenceMatcher
-from playwright.async_api import Error as PlaywrightError
 from pathlib import Path
 
 import toml
+from playwright.async_api import Error as PlaywrightError
 from playwright.sync_api import Playwright
 
 list_us_cities = [
@@ -371,7 +371,7 @@ async def get_element_description(element, tag_name, role_value, type_value):
     try:
         text_content = await element.text_content(timeout=5000)
     except PlaywrightError as e:
-        print(f"获取文本内容时出错：{e}")
+        print(f"Error occurred while getting text content: {e}")
     text = (text_content or "").strip()
     if text:
         text = remove_extra_eol(text)
@@ -410,11 +410,12 @@ async def get_element_description(element, tag_name, role_value, type_value):
 
     return None
 
+
 async def get_element_data(element, tag_name):
     tag_name_list = ["a", "button", "input", "select", "textarea", "adc-tab"]
 
     try:
-        # 1. 检查元素连接、可见性
+        # 1. Check element connection and visibility
         if not await element.evaluate("el => !!el.isConnected", timeout=500):
             return None
         is_hidden = await element.is_hidden(timeout=500)
@@ -425,7 +426,7 @@ async def get_element_data(element, tag_name):
         print(f"[Element Check Error] {e}")
         return None
 
-    # 2. tag 判断
+    # 2. Tag check
     tag_head = ""
     real_tag_name = ""
     if tag_name in tag_name_list:
@@ -444,7 +445,7 @@ async def get_element_data(element, tag_name):
             return None
         tag_head = real_tag_name
 
-    # 3. 属性获取（这里你设置 timeout=0 可能会出问题，建议设一个小 timeout）
+    # 3. Attribute fetching (setting timeout=0 here may cause problems, it is recommended to set a small timeout)
     try:
         role_value = await element.get_attribute("role", timeout=500)
         type_value = await element.get_attribute("type", timeout=500)
@@ -452,23 +453,23 @@ async def get_element_data(element, tag_name):
         print(f"[Attribute fetch error] {e}")
         return None
 
-    # 4. 获取描述，加超时保护
+    # 4. Get description, with timeout protection
     try:
         description = await asyncio.wait_for(
             get_element_description(element, real_tag_name, role_value, type_value),
-            timeout=3  # 最多等 3 秒
+            timeout=3,  # Wait at most 3 seconds
         )
     except asyncio.TimeoutError:
-        print("[Timeout] get_element_description 超时")
+        print("[Timeout] get_element_description timed out")
         return None
     except Exception as e:
-        print(f"[Error] get_element_description 出错: {e}")
+        print(f"[Error] get_element_description error: {e}")
         return None
 
     if not description:
         return None
 
-    # 5. 获取 bounding box，加超时保护
+    # 5. Get bounding box, with timeout protection
     try:
         rect = await asyncio.wait_for(element.bounding_box(), timeout=2)
         if not rect:
@@ -477,7 +478,7 @@ async def get_element_data(element, tag_name):
         print(f"[bounding_box error] {e}")
         rect = {"x": 0, "y": 0, "width": 0, "height": 0}
 
-    # 6. 构造返回值
+    # 6. Construct return value
     if role_value:
         tag_head += f' role="{role_value}"'
     if type_value:
@@ -500,13 +501,16 @@ async def get_element_data(element, tag_name):
 async def run_with_limit(element, tag_name, semaphore):
     async with semaphore:
         try:
-            return await asyncio.wait_for(get_element_data(element, tag_name), timeout=5)
+            return await asyncio.wait_for(
+                get_element_data(element, tag_name), timeout=5
+            )
         except asyncio.TimeoutError:
             print("[Timeout] get_element_data took too long.")
             return None
         except Exception as e:
             print(f"[Error] get_element_data error: {e}")
             return None
+
 
 async def get_interactive_elements_with_playwright(page):
     interactive_elements_selectors = [
