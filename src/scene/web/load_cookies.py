@@ -4,18 +4,22 @@ from playwright.sync_api import sync_playwright
 
 
 def run(playwright):
-    browser = playwright.chromium.launch(headless=False) 
+    browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
 
     try:
-        with open('taobao.json', 'r') as f: # you should change the file name to the cookies file you want to load
+        with open(
+            "taobao.json", "r"
+        ) as f:  # you should change the file name to the cookies file you want to load
             cookies = json.load(f)
             context.add_cookies(cookies)
     except FileNotFoundError:
         print("Cookies file not found. Will proceed with new login.")
 
     page = context.new_page()
-    page.goto('https://www.amazon.com/') # you should change the url to the website you want to visit
+
+    # you should change the url to the website you want to visit
+    page.goto("https://www.taobao.com/")
 
     coupon_button = page.locator('button:text("Add to cart")')
     print(coupon_button)
@@ -31,11 +35,12 @@ def run(playwright):
     input("Press Enter to close browser...")
 
     # Save cookies to file if needed
-    # with open('taobao.json', 'w') as f:
-    #     json.dump(context.cookies(), f)
+    with open("taobao.json", "w") as f:
+        json.dump(context.cookies(), f)
 
     context.close()
     browser.close()
+
 
 with sync_playwright() as playwright:
     run(playwright)
