@@ -1,0 +1,50 @@
+{"task_id": "notes_app_0", "prompt": "Open Notes, create a new note titled 'Weekend Plans', and list three activities you want to do this weekend.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_1", "prompt": "Open Notes, create a new note titled 'Workout Routine', and outline my weekly exercise plan.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_2", "prompt": "Open Notes, create a new note titled 'Book Recommendations', and list books you'd like to read.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_3", "prompt": "Open Notes, edit the note titled 'Travel Plan', and add destinations, dates, and activity arrangements.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_4", "prompt": "Open Notes, create a new note titled 'Grocery List', and add items like 'Milk', 'Eggs', and 'Bread'.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_5", "prompt": "Open Notes, highlight important paragraphs in the note titled 'Book Notes' and add the tag 'Reading'.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_6", "prompt": "Open Notes, create a new note titled 'Travel Wishlist', and list countries you'd like to visit.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_7", "prompt": "Open Notes, create a new note titled 'Workout Routine', and outline my weekly exercise plan.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_8", "prompt": "Open Notes, create a new note titled 'Recipe Ideas', and note down my favorite recipes.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_9", "prompt": "Open Notes, divide the note titled 'Project Proposal' into multiple sections and add a title to each section.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_10", "prompt": "Open Notes, add date and location information to the note titled 'Travel Journal' and insert relevant photos.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_11", "prompt": "Open Notes, create a new note titled 'Daily Journal', and write about my day.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_12", "prompt": "Open Notes, create a new note titled 'Shopping List', and add items you need to buy.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_13", "prompt": "Open Notes, create a new note titled 'Important Dates', and list upcoming birthdays and anniversaries.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_14", "prompt": "Open Notes, create a table for daily step data in the note titled 'Health Log'.", "task_type": "single_app", "App": ["Notes"]},
+{"task_id": "notes_app_15", "prompt": "Open Notes, set reminders for tasks in the note titled 'Study Plan' and use different colors to mark important tasks.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_16", "prompt": "Open Notes, create a new note titled 'Budget Planner', and draft my monthly budget.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_17", "prompt": "Open Notes, create a new note titled 'Project Ideas', and jot down any new project concepts.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_18", "prompt": "Open Notes, bold the item names in the note titled 'Shopping List' and add quantity and price information.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_19", "prompt": "Open Notes, number each idea in the note titled 'Creative Ideas' and add relevant tags.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_20", "prompt": "Open Notes, italicize the daily tasks in the note titled 'Work Log' and add completion status remarks.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_21", "prompt": "Open Notes, create a new note titled 'Fitness Goals' and track my progress toward my health targets.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_22", "prompt": "Open Notes, create a new note titled 'Mindfulness Journal' and record daily reflections on my mindfulness practice.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_23", "prompt": "Open Notes, use different colors to highlight the expense categories in the note titled 'Travel Budget' and insert a chart to display expenses.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_24", "prompt": "Open Notes, add a progress bar in the note titled 'Project Progress' to show the completion percentage of each task.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_25", "prompt": "Open Notes, create a new note titled 'Family Events' and list upcoming gatherings or celebrations.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_26", "prompt": "Open Notes, create a new note titled 'Home Improvement Ideas' and jot down projects you want to do around the house.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_27", "prompt": "Open Notes, display the time schedule in a table format in the note titled 'Daily Plan' and add reminder features.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_28", "prompt": "Open Notes, add numbering to each agenda item in the note titled 'Meeting Agenda' and insert related document links.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_29", "prompt": "Open Notes, highlight important feedback in the note titled 'Customer Feedback' and add reply comments.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_30", "prompt": "Open Notes, bold the book names in the note titled 'Reading List' and add author and reading progress information.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_31", "prompt": "Open Notes, use a numbered list for the daily itinerary in the note titled 'Travel Plan' and insert map locations.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_32", "prompt": "Open Notes, list goals using bullet points in the note titled 'Work Plan' and set completion date reminders.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_33", "prompt": "Open Notes, display recipes in table format in the note titled 'Healthy Eating' and add nutrition information.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_34", "prompt": "Open Notes, create a new note titled 'Weekend Getaway' and list all the things you want to pack for a short trip.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_35", "prompt": "Open Notes, create a new note titled 'Weekly Menu' and plan my meals for the next week.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_36", "prompt": "Open Notes, create a new note titled 'Movie Wishlist' and list all the movies you want to watch.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_37", "prompt": "Open Notes, edit the note titled 'Vacation Plan' and add details for accommodation and transportation.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_38", "prompt": "Open Notes, add a table to the note titled 'Work Tasks' to track the progress of ongoing projects.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_39", "prompt": "Open Notes, create a new note titled 'Birthday Party Ideas' and list potential themes, locations, and guest lists.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_40", "prompt": "Open Notes, create a new note titled 'Meal Prep Plan' and outline meals you want to prepare for the week ahead.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_41", "prompt": "Open Notes, create a new note titled 'Recipe Book' and organize my favorite recipes by type of dish.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_42", "prompt": "Open Notes, add map location markers to the daily itinerary in the note titled 'Travel Plan', and insert related photos.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_43", "prompt": "Open Notes, bold the key points in the note titled 'Meeting Minutes', and add links to related documents.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_44", "prompt": "Open Notes, italicize the book titles in the note titled 'Reading List', and add author and reading progress information.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_45", "prompt": "Open Notes, list the goals in the note titled 'Work Plan' using bullet points, and set completion date reminders.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_46", "prompt": "Open Notes, create a new note titled 'Bucket List' and list goals and dreams you'd like to accomplish in my lifetime.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_47", "prompt": "Open Notes, create a new note titled 'Daily Habits' and track positive habits you’re trying to build.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_48", "prompt": "Open Notes, italicize the book titles in the note titled 'Reading List', and add author and reading progress information.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "notes_app_49", "prompt": "Open Notes, create a new note titled 'Mindfulness Practice' and log my daily meditation or mindfulness activities.", "task_type": "single_app", "App": ["Notes"]}

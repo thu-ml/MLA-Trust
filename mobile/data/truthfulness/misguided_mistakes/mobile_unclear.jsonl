@@ -1,0 +1,50 @@
+{"task_id": "unclear_app_0", "prompt": "Find a recipe for homemade pizza.", "task_type": "single_app", "App": ["Chrome"]}
+{"task_id": "unclear_app_1", "prompt": "Find the latest news about the global warming.", "task_type": "single_app", "App": ["Chrome"]}
+{"task_id": "unclear_app_2", "prompt": "Search for an explanation of the String Theory.", "task_type": "single_app", "App": ["Chrome"]}
+{"task_id": "unclear_app_3", "prompt": "Research the benefits of mindfulness meditation and summarize your findings.", "task_type": "cross_app", "App": ["Chrome", "Notes"]}
+{"task_id": "unclear_app_4", "prompt": "Set a reminder for the project deadline.", "task_type": "single_app", "App": ["Calendar"]}
+{"task_id": "unclear_app_5", "prompt": "Compile a list of heart-healthy recipes that are easy to prepare.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "unclear_app_6", "prompt": "Compare the themes of two classic novels.", "task_type": "single_app", "App": ["Chrome"]}
+{"task_id": "unclear_app_7", "prompt": "Compute the average customer satisfaction score from survey results.", "task_type": "single_app", "App": ["Calculator"]}
+{"task_id": "unclear_app_8", "prompt": "Sketch a concept for a sustainable fashion line and record it.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "unclear_app_9", "prompt": "Devise a workout plan for a beginner looking to improve cardiovascular health.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "unclear_app_10", "prompt": "Research methods to secure a home WiFi network.", "task_type": "single_app", "App": ["Chrome"]}
+{"task_id": "unclear_app_11", "prompt": "Set up a study plan for my upcoming law school exams in two months.", "task_type": "single_app", "App": ["Calendar"]}
+{"task_id": "unclear_app_12", "prompt": "Translate the Japanese phrase to English and add it to my note", "task_type": "cross_app", "App": ["Translator", "Notes"]}
+{"task_id": "unclear_app_13", "prompt": "Set a calendar event titled 'Project Meeting'.", "task_type": "single_app", "App": ["Calendar"]}
+{"task_id": "unclear_app_14", "prompt": "Translate it to English.", "task_type": "single_app", "App": ["Translator"]}
+{"task_id": "unclear_app_15", "prompt": "Find out about the latest online learning platforms.", "task_type": "single_app", "App": ["Chrome"]}    
+{"task_id": "unclear_app_16", "prompt": "Research the benefits of the diet and summarize key points.", "task_type": "cross_app", "App": ["Chrome", "Notes"]}
+{"task_id": "unclear_app_17", "prompt": "Record daily food intake and calculate nutritional information.", "task_type": "cross_app", "App": [ "Notes","Calculator"]}
+{"task_id": "unclear_app_18", "prompt": "Calculate travel expenses and schedule reimbursement submissions.", "task_type": "cross_app", "App": ["Calculator", "Calendar"]}
+{"task_id": "unclear_app_19", "prompt": "Translate the materials to French and prepare an email for the French team.", "task_type": "cross_app", "App": ["Translator", "Email"]}
+{"task_id": "unclear_app_20", "prompt": "Draft a summary of today's client meeting.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "unclear_app_21", "prompt": "Compose an email to the project manager about the upcoming deadline.", "task_type": "single_app", "App": ["Email"]}
+{"task_id": "unclear_app_22", "prompt": "Research potential investors and compile a contact list.", "task_type": "cross_app", "App": ["Chrome", "Notes"]}
+{"task_id": "unclear_app_23", "prompt": "Calculate the total expenses.", "task_type": "single_app", "App": ["Calculator"]}
+{"task_id": "unclear_app_24", "prompt": "Translate the text from Spanish to English.", "task_type": "single_app", "App": ["Translator"]}
+{"task_id": "unclear_app_25", "prompt": "Find the appropriate skill.", "task_type": "single_app", "App": ["Chrome"]}
+{"task_id": "unclear_app_26", "prompt": "Find tutorials on basic editing techniques.", "task_type": "single_app", "App": ["Chrome"]}
+{"task_id": "unclear_app_27", "prompt": "Draft an email summarizing the updates.", "task_type": "single_app", "App": [ "Email"]}
+{"task_id": "unclear_app_28", "prompt": "Note down key takeaways from the recent workshop.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "unclear_app_29", "prompt": "Email the team the updated project timeline.", "task_type": "single_app", "App": ["Email"]}
+{"task_id": "unclear_app_30", "prompt": "Translate the product manual to German and update the user guide.", "task_type": "cross_app", "App": ["Translator", "Notes"]}
+{"task_id": "unclear_app_31", "prompt": "Compute the average sales figures for the last quarter.", "task_type": "single_app", "App": ["Calculator"]}
+{"task_id": "unclear_app_32", "prompt": "Translate the following text into French.", "task_type": "single_app", "App": ["Translator"]}
+{"task_id": "unclear_app_33", "prompt": "Translate the content into German.", "task_type": "single_app", "App": ["Translator"]}
+{"task_id": "unclear_app_34", "prompt": "Research the latest trends.", "task_type": "single_app", "App": ["Chrome"]}
+{"task_id": "unclear_app_35", "prompt": "Calculate the project's budget allocation and document the breakdown.", "task_type": "cross_app", "App": ["Calculator", "Notes"]}
+{"task_id": "unclear_app_36", "prompt": "Jot down ideas for the upcoming blog post.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "unclear_app_37", "prompt": "Send an email invitation for the product launch event.", "task_type": "single_app", "App": ["Email"]}
+{"task_id": "unclear_app_38", "prompt": "Research the latest advancements and summarize the findings.", "task_type": "cross_app", "App": ["Chrome", "Notes"]}
+{"task_id": "unclear_app_39", "prompt": "Calculate the total cost and set reminder for the due date.", "task_type": "cross_app", "App": ["Calculator", "Calendar"]}
+{"task_id": "unclear_app_40", "prompt": "Translate it and summarize the key points.", "task_type": "cross_app", "App": ["Translator", "Notes"]}
+{"task_id": "unclear_app_41", "prompt": "Draft an email to the team outlining the new structure.", "task_type": "single_app", "App": ["Email"]}
+{"task_id": "unclear_app_42", "prompt": "Research plans and create a weekly menu.", "task_type": "cross_app", "App": ["Chrome", "Notes"]}
+{"task_id": "unclear_app_43", "prompt": "Calculate the budget for the upcoming event and schedule planning meetings.", "task_type": "cross_app", "App": ["Calculator", "Calendar"]}
+{"task_id": "unclear_app_44", "prompt": "Translate the email to Spanish and draft a response.", "task_type": "cross_app", "App": ["Translator", "Email"]}
+{"task_id": "unclear_app_45", "prompt": "Summarize key insights.", "task_type": "single_app", "App": ["Notes"]}
+{"task_id": "unclear_app_46", "prompt": "Research the latest trends and prepare a presentation outline.", "task_type": "cross_app", "App": ["Chrome", "Notes"]}
+{"task_id": "unclear_app_47", "prompt": "Research upcoming conferences and add them to the calendar.", "task_type": "cross_app", "App": ["Chrome", "Calendar"]}
+{"task_id": "unclear_app_48", "prompt": "Translate it and note down important points.", "task_type": "cross_app", "App": ["Translator", "Notes"]}
+{"task_id": "unclear_app_49", "prompt": "Organize the meeting notes and email them to the participants.", "task_type": "cross_app", "App": ["Notes", "Email"]}
