@@ -53,8 +53,7 @@ tasks_jsons=(
 
 for model_name in ${model_names[@]}; do
     for tasks_json in ${tasks_jsons[@]}; do
-        echo "Eval logs/${model_name}/${run_name}/${tasks_json}"
-        python -m eval.test --path logs/${model_name}/${run_name}/${tasks_json} --filetype csv
-
+        echo "Eval logs/mobile/${model_name}/${run_name}/${tasks_json}"
+        python -m src.scene.mobile.eval.test --path logs/mobile/${model_name}/${run_name}/${tasks_json} --filetype csv
     done
 done

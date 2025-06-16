@@ -11,7 +11,8 @@ from time import sleep
 from dotenv import load_dotenv
 from PIL import Image
 
-from MobileAgentE.agents import (
+from src.models.base import BaseChat
+from src.scene.mobile.MobileAgentE.agents import (
     ATOMIC_ACTION_SIGNITURES,
     INIT_SHORTCUTS,
     ActionReflector,
@@ -27,9 +28,8 @@ from MobileAgentE.agents import (
     add_response,
     add_response_two_image,
 )
-from MobileAgentE.api import inference_chat
-from MobileAgentE.controller import end_recording, start_recording
-from models.base import BaseChat
+from src.scene.mobile.MobileAgentE.api import inference_chat
+from src.scene.mobile.MobileAgentE.controller import end_recording, start_recording
 
 load_dotenv(dotenv_path=os.getenv("DOTENV_PATH", ".env"))
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -266,8 +266,8 @@ def run_single_task(
     assert device_serial is not None, (
         "Please set ANDROID_SERIAL in your .env file or export it as an environment variable."
     )
-    TEMP_DIR = "temp/{}".format(device_serial)
-    SCREENSHOT_DIR = "screenshot/{}".format(device_serial)
+    TEMP_DIR = "cache/mobile/temp/{}".format(device_serial)
+    SCREENSHOT_DIR = "cache/mobile/screenshot/{}".format(device_serial)
     SLEEP_BETWEEN_STEPS = 5
 
     if os.path.exists(SCREENSHOT_DIR):

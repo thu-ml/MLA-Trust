@@ -1,6 +1,6 @@
 import copy
 
-from MobileAgentE.api import encode_image
+from src.scene.mobile.MobileAgentE.api import encode_image
 
 
 def init_action_chat():

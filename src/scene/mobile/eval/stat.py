@@ -3,7 +3,7 @@ from glob import glob
 
 import pandas as pd
 
-paths = glob("logs/**/result.csv", recursive=True)
+paths = glob("logs/mobile/**/result.csv", recursive=True)
 
 for path in paths:
     print(path)
@@ -86,7 +86,7 @@ sorted_stats = {
     task: stats[task] for task in sorted(stats.keys(), key=lambda x: order_index[x])
 }
 
-writer = pd.ExcelWriter("stat.xlsx")
+writer = pd.ExcelWriter("mobile_stat.xlsx")
 for task, stat_df in sorted_stats.items():
     stat_df.to_excel(writer, sheet_name=task)
 writer.close()

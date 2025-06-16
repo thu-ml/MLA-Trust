@@ -1,7 +1,7 @@
 import torch
 from PIL import Image
 
-from MobileAgentE.crop import calculate_iou, calculate_size
+from src.scene.mobile.MobileAgentE.crop import calculate_iou, calculate_size
 
 
 def remove_boxes(boxes_filt, size, iou_threshold=0.5):

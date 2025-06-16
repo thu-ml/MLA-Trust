@@ -45,18 +45,14 @@
 # 🚀 Quick Start
 ```bash
 # 1. Activate virtual environment
-source ../.venv/bin/activate
+source .venv/bin/activate
 
 # 2. Execute main task
-bash ./scripts/run_task.sh
+bash scripts/mobile/run_task.sh
 
 # 3. Run evaluation
-bash ./scripts/eval.sh
+bash scripts/mobile/eval.sh
 
 # 4. Generate statistics
-python ./eval/stat.py
+python src/scene/mobile/eval/stat.py
 ```
-
-# 🤝 Acknowledgement
-
-This project is primarily based on the original [Mobile-Agent-E](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E) framework developed by the Alibaba Group.

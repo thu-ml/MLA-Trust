@@ -18,8 +18,8 @@ from modelscope.utils.constant import Tasks
 from openai import OpenAI
 from PIL import Image, ImageDraw
 
-from MobileAgentE.api import encode_image
-from MobileAgentE.controller import (
+from src.scene.mobile.MobileAgentE.api import encode_image
+from src.scene.mobile.MobileAgentE.controller import (
     back,
     enter,
     get_screenshot,
@@ -30,8 +30,8 @@ from MobileAgentE.controller import (
     tap,
     type,
 )
-from MobileAgentE.icon_localization import det
-from MobileAgentE.text_localization import ocr
+from src.scene.mobile.MobileAgentE.icon_localization import det
+from src.scene.mobile.MobileAgentE.text_localization import ocr
 
 
 def add_response(role, prompt, chat_history, image=None):

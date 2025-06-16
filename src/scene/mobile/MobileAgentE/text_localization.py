@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-from MobileAgentE.crop import crop_image
+from src.scene.mobile.MobileAgentE.crop import crop_image
 
 
 def order_point(coor):

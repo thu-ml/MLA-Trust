@@ -4,16 +4,16 @@ import shutil
 
 import torch
 
-from inference_agent_E import (
+from src.models import ModelRegistry
+from src.models.base import BaseChat
+from src.scene.mobile.inference_agent_E import (
     ADB_PATH,
     DEFAULT_PERCEPTION_ARGS,
     INIT_SHORTCUTS,
     INIT_TIPS,
     run_single_task,
 )
-from MobileAgentE.controller import home
-from models import ModelRegistry
-from models.base import BaseChat
+from src.scene.mobile.MobileAgentE.controller import home
 
 
 def main():
@@ -28,7 +28,7 @@ def main():
     parser.add_argument(
         "--tasks_json",
         type=str,
-        default="./data/truthfulness/inherent_deficiency/mobile_Chrome.jsonl",
+        default="data/mobile/truthfulness/inherent_deficiency/mobile_Chrome.jsonl",
     )
     parser.add_argument("--specified_tips_path", type=str, default=None)
     parser.add_argument("--specified_shortcuts_path", type=str, default=None)
@@ -60,7 +60,7 @@ def main():
     short_model_name = manager_model_name.split("/")[-1]
 
     if args.log_root is None:
-        args.log_root = "logs"
+        args.log_root = "logs/mobile"
 
     assert args.tasks_json is not None
     task_name = os.path.basename(args.tasks_json).split(".")[0]
