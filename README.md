@@ -44,42 +44,6 @@ MLA-Trust: Benchmarking Trustworthiness of Multimodal LLM Agents in GUI Environm
 </tr>
 </table>
 
-## 🔍 Key Findings
-
-> 💡 **Our comprehensive evaluation reveals critical insights about MLA trustworthiness across different dimensions and scenarios.**
-
-### 🚨 1. Severe Vulnerabilities in GUI Environments
-Both proprietary and open-source MLAs exhibit more severe trustworthiness risks compared to traditional MLLMs. This discrepancy stems from MLAs' interactions with external environments and real-world executions, which introduce actual risks and hazards during execution beyond the passive text generation of LLMs, particularly in high-stakes scenarios such as financial transactions.
-
-### 🧠 2. Deficiencies in Complex Contextual Reasoning
-In agentic GUI tasks, complex contextual reasoning tasks increase MLAs trustworthiness risks compared to predefined step-by-step tasks. Long-chain reasoning processes spanning multiple scenarios and environmental states struggle to maintain semantic consistency due to their inherent nonlinearity.
-
-### 🛡️ 3. Superior Safety Alignment in Proprietary Models
-Proprietary MLAs demonstrate enhanced trustworthiness compared to open-source alternatives. Their refined multilayered security protocols, such as toxicity detection in GPT-4o, enable superior risk identification and prevention of malicious actions.
-
-### 🔄 4. Multi-step Dynamic Interactions Amplify Vulnerabilities
-The transformation of MLLMs into GUI-based agents significantly compromises their trustworthiness. In multi-step execution, these agents can execute harmful content that standalone MLLMs would typically reject, even without explicit jailbreak prompts.
-
-### ⚡ 5. Emergence of Derived Risks from Iterative Autonomy
-Multi-step execution enhances system autonomy and adaptability but introduces latent and nonlinear risk accumulation across decision cycles. Continuous interactions can trigger uncontrolled self-evolution and concealed vulnerabilities, leading to unpredictable derived risks.
-
-### 🎯 6. Training Paradigm Effectiveness
-Open-source models employing structured fine-tuning strategies, such as Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF), exhibit enhanced controllability and safety in real-world tasks. Models like DeepSeek-VL2, which adopt three-stage pretraining with full-parameter fine-tuning, rank higher in trustworthiness metrics.
-
-### 📊 7. Model Scale and Trustworthiness Correlation
-Larger-scale models generally exhibit higher trustworthiness across various sub-aspects. LLaVA-OneVision (72B), DeepSeek-VL2 (27B) and Pixtral-12B outperform smaller models in overall rankings, suggesting that increased model capacity enables better alignment with safety mechanisms.
-
-## 💡 Research Implications
-
-> 🔄 **The trustworthiness landscape has evolved from "information risk" to "behavior risk"** as MLAs become more autonomous and capable of performing actions within diverse environments.
-
-### 🎯 Key Recommendations:
-
-<div align="left">
-
-🔧 **a) Draw lessons from system engineering**: Consider the entire lifecycle of an intelligent agent, from design and development to deployment and operation in real-world environments. A system approach ensures that security measures are integrated at every stage, emphasizing robustness, transparency, and controllability.
-
-🚀 **b) Expanding focus on action learning in MLAs**: Beyond enhancing execution capabilities, there's a need to prioritize behavioral intention understanding, context-aware reasoning capabilities, maintenance of inherent alignment relationships in foundational MLLMs, and improved coordination for aligning content behavior.
 
 
 ## 💻 Installation
