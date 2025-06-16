@@ -1,19 +1,24 @@
-# 🛡️ MLA-Trust: Benchmarking Trustworthiness of Multimodal LLM Agents in GUI Environments
+
+
+<h1 align="center">
+MLA-Trust: Benchmarking Trustworthiness of Multimodal LLM Agents in GUI Environments
+
+</h1>
+
 
 <div align="center">
+    <img src="https://img.shields.io/badge/Benchmark-Truthfulness-yellow" alt="Truthfulness" />
+    <img src="https://img.shields.io/badge/Benchmark-Safety-red" alt="Safety" />
+    <img src="https://img.shields.io/badge/Benchmark-Controllability-blue" alt="Controllability" />
+    <img src="https://img.shields.io/badge/Benchmark-Privacy-green" alt="Privacy" />
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
-![Research](https://img.shields.io/badge/Research-AI%20Safety-blue.svg?style=for-the-badge)
-
-📊 **First Comprehensive Framework** | 🔒 **4 Trust Dimensions** | ⚠️ **34 High-Risk Tasks** | 🤖 **GUI Agent Evaluation**
 
 </div>
 
+
 ---
 
-🚀 **MLA-Trust** is the first comprehensive and unified framework that evaluates the MLA trustworthiness across four principled dimensions: **truthfulness**, **controllability**, **safety** and **privacy**. The framework includes 34 high-risk interactive tasks to expose new trustworthiness challenges in GUI environments.
+🛡️ **MLA-Trust** is the first comprehensive and unified framework that evaluates the MLA trustworthiness across four principled dimensions: **truthfulness**, **controllability**, **safety** and **privacy**. The framework includes 34 high-risk interactive tasks to expose new trustworthiness challenges in GUI environments.
 
 ![Framework](assets/framework.jpg)
 
@@ -142,7 +147,7 @@ This project is primarily based on [Mobile-Agent-E](https://github.com/X-PLUG/Mo
 ## 📞 Contact
 
 We welcome contributions! Please feel free to submit issues and pull requests.
-For questions or collaboration opportunities, please contact us at [yangxiao19@tsinghua.org.cn,52285904015@stu.ecnu.edu.cn]
+For questions or collaboration opportunities, please contact us at yangxiao19@tsinghua.org.cn, 52285904015@stu.ecnu.edu.cn
 
 ## 🌟 Citation
 
