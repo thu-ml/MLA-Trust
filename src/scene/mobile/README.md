@@ -32,14 +32,14 @@
 
 ## Environment Configuration
 1. Create `.env` file in root directory
-2. Refer to `inference_agent_E.py` and configure environment variables
+2. Refer to `src/scene/mobile/inference_agent_E.py` and configure environment variables
 
 ## Preconditions for Tasks
-1. Change `adb.sh` script for device setup
+1. Change `scripts/mobile/adb.sh` script for device setup
     - Script functions: 1) Unlock device; 2) Return to home screen;
     - Must be run before each task
     - Customize according to your device specifications
-2. Change ANDROID_SERIAL in `scripts/run_task.sh` to match your device
+2. Change ANDROID_SERIAL in `scripts/mobile/run_task.sh` to match your device
 
 
 # 🚀 Quick Start

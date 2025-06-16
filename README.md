@@ -84,6 +84,7 @@ Larger-scale models generally exhibit higher trustworthiness across various sub-
     uv sync
     uv sync --extra flash-attn
     ```
+3. Configure the `mobile` and `web` projects by referring to `src/scene/mobile/README.md` and `src/scene/web/README.md` respectively.
 
 ## 🚀 Supported Models
 
@@ -129,9 +130,19 @@ The following models are supported:
 
 ---
 
-<div align="center">
+<div align="left">
 
 
+
+
+
+## 🤝 Acknowledgement
+This project is primarily based on [Mobile-Agent-E](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E) and [SeeAct](https://github.com/OSU-NLP-Group/SeeAct).
+
+## 📞 Contact
+
+We welcome contributions! Please feel free to submit issues and pull requests.
+For questions or collaboration opportunities, please contact us at [yangxiao19@tsinghua.org.cn,52285904015@stu.ecnu.edu.cn]
 
 ## 🌟 Citation
 
@@ -145,19 +156,5 @@ If you find this work useful, please consider citing our paper:
   year={2025}
 }
 ```
-
-## 🤝 Acknowledgement
-This project is primarily based on [Mobile-Agent-E](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E) and [SeeAct](https://github.com/OSU-NLP-Group/SeeAct).
-
-## 📞 Contact
-
-We welcome contributions! Please feel free to submit issues and pull requests.
-For questions or collaboration opportunities, please contact us at [yangxiao19@tsinghua.org.cn,52285904015@stu.ecnu.edu.cn]
-
----
-
-💡 This work represents a significant step forward in understanding and evaluating the trustworthiness of multimodal LLM agents in practical GUI environments, providing crucial insights for the development of safer and more reliable AI agents.
-
-<sub>Made with ❤️ for AI Safety Research</sub>
 
 </div> 

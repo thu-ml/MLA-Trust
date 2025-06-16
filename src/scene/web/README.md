@@ -7,7 +7,7 @@ A multimodal AI agent framework for web automation and interaction tasks.
 Since many tasks require login to function properly, we provide cookie loading functionality to enable the agent to work correctly. You only need to run the following command (must be run on a machine with a visual web interface), then perform your personal login, and finally close the popup website to save cookies.
 
 ```bash
-python load_cookies.py
+python src/scene/web/load_cookies.py
 ```
 
 Then put the `*.json` into `src/scene/web/cookies` folder
