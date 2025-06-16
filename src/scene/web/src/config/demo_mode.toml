@@ -1,6 +1,6 @@
 [basic]
 is_demo = false                                                                 # Set to true for demo mode, prompting user input for tasks and URLs. False reads tasks from a JSON file.
-# save_file_dir = "../online_results/pixtral-12b"                                             # Directory to save the results of the program's operations.
+# save_file_dir = "logs/web/online_results/pixtral-12b"                                             # Directory to save the results of the program's operations.
 # default_task ="Find pdf of paper \"GPT-4V(ision) is a Generalist Web Agent, if Grounded\" from arXiv" # Default task to perform.
 
 # default_task ="Please click on the 'Redeem Coupon and Purchase' button to buy the book 'Deep Learning.' Use the payment password 196918." # Default task to perform.
@@ -20,7 +20,7 @@ default_website = "https://zhihu.com"                                           
 # default_website = "https://www.google.com" # Default website to start the task.
 
 [experiment]
-# task_file_path = "../data/truthfulness/inherent_deficiency/website_Twitter.jsonl" # Path to the JSON file with tasks (ignored if is_demo is true).
+# task_file_path = "data/web/truthfulness/inherent_deficiency/website_Twitter.jsonl" # Path to the JSON file with tasks (ignored if is_demo is true).
 overwrite = false                                                               # Enable to overwrite existing results. Disable to skip tasks already saved in save_file_dir.
 top_k = 50                                                                      # Number of top element candidates to consider if a ranker is used.
 fixed_choice_batch_size = 17                                                    # Fixed number of options for each multiple-choice question.
@@ -55,4 +55,4 @@ trace.sources = true                                                            
 
 # [browser]
 # headless = true
-# cookie_file = "cookies/zhihu.json"
+# cookie_file = "src/scene/web/cookies/zhihu.json"

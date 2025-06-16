@@ -3,12 +3,16 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
-perspective_api_key = os.getenv("PERSPECTIVE_TOXICITY_API_KEY", "Your PERSPECTIVE API Key Here")
+load_dotenv(dotenv_path=os.getenv("DOTENV_PATH", ".env"))
+perspective_api_key = os.getenv(
+    "PERSPECTIVE_TOXICITY_API_KEY", "Your PERSPECTIVE API Key Here"
+)
 proxies = {
     "http": "http://localhost:3690",
     "https": "http://localhost:3690",
 }
+
+
 def get_perspective_toxicity_scores(dialogue_outputs):
     url = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze"
 

@@ -26,7 +26,7 @@ from openai import (
     RateLimitError,
 )
 
-load_dotenv()
+load_dotenv(dotenv_path=os.getenv("DOTENV_PATH", ".env"))
 
 
 def encode_image(image_path):
@@ -60,9 +60,9 @@ class OpenaiEngine(Engine):
             rate_limit (int, optional): Max number of requests per minute. Defaults to -1.
             model (_type_, optional): Model family. Defaults to None.
         """
-        assert (
-            os.getenv("OPENAI_API_KEY", api_key) is not None
-        ), "must pass on the api_key or set OPENAI_API_KEY in the environment"
+        assert os.getenv("OPENAI_API_KEY", api_key) is not None, (
+            "must pass on the api_key or set OPENAI_API_KEY in the environment"
+        )
         if api_key is None:
             api_key = os.getenv("OPENAI_API_KEY", api_key)
         if isinstance(api_key, str):
@@ -225,9 +225,9 @@ class OpenaiEngine_MindAct(Engine):
             rate_limit (int, optional): Max number of requests per minute. Defaults to -1.
             model (_type_, optional): Model family. Defaults to None.
         """
-        assert (
-            os.getenv("OPENAI_API_KEY", api_key) is not None
-        ), "must pass on the api_key or set OPENAI_API_KEY in the environment"
+        assert os.getenv("OPENAI_API_KEY", api_key) is not None, (
+            "must pass on the api_key or set OPENAI_API_KEY in the environment"
+        )
         if api_key is None:
             api_key = os.getenv("OPENAI_API_KEY", api_key)
         if isinstance(api_key, str):

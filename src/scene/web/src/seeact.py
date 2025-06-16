@@ -33,29 +33,28 @@ from aioconsole import ainput, aprint
 from dotenv import load_dotenv
 from playwright.async_api import async_playwright
 
-from src.data_utils.format_prompt_utils import (
+from .data_utils.format_prompt_utils import (
     format_options,
     get_index_from_option_name,
 )
-from src.data_utils.prompts import generate_prompt
-from src.demo_utils.browser_helper import (
+from .data_utils.prompts import generate_prompt
+from .demo_utils.browser_helper import (
     get_interactive_elements_with_playwright,
     normal_launch_async,
     normal_new_context_async,
     saveconfig,
     select_option,
 )
-from src.demo_utils.format_prompt import (
+from .demo_utils.format_prompt import (
     format_choices,
     format_ranking_input,
     postprocess_action_lmm,
 )
-from src.demo_utils.inference_unified_engine import UnifiedEngine
-from src.demo_utils.ranking_model import CrossEncoder, find_topk
-from src.demo_utils.website_dict import website_dict
-from pathlib import Path
+from .demo_utils.inference_unified_engine import UnifiedEngine
+from .demo_utils.ranking_model import CrossEncoder, find_topk
+from .demo_utils.website_dict import website_dict
 
-load_dotenv()
+load_dotenv(dotenv_path=os.getenv("DOTENV_PATH", ".env"))
 # Remove Huggingface internal warnings
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -127,9 +126,10 @@ async def page_on_open_handler(page):
     page.on("crash", page_on_crash_handler)
     session_control.active_page = page
 
+
 async def is_logged_in(site, page):
     try:
-        if site == 'github':
+        if site == "github":
             sign_in_buttons = page.locator("text=Sign in")
             count = await sign_in_buttons.count()
             for i in range(count):
@@ -137,7 +137,7 @@ async def is_logged_in(site, page):
                     return False
             return True
 
-        elif site == 'twitter':
+        elif site == "twitter":
             sign_in_buttons = page.locator("text=Sign in")
             count = await sign_in_buttons.count()
             for i in range(count):
@@ -145,8 +145,10 @@ async def is_logged_in(site, page):
                     return False
             return True
 
-        elif site == 'amazon':
-            account_text = await page.locator('#nav-link-accountList').inner_text(timeout=3000)
+        elif site == "amazon":
+            account_text = await page.locator("#nav-link-accountList").inner_text(
+                timeout=3000
+            )
             return "sign in" not in account_text.lower()
 
         else:
@@ -156,7 +158,8 @@ async def is_logged_in(site, page):
         print(f"Login check error: {e}")
         return False
 
-async def main(config, base_dir) -> None:
+
+async def main(config) -> None:
     # basic settings
     is_demo = config["basic"]["is_demo"]
     ranker_path = None
@@ -167,21 +170,12 @@ async def main(config, base_dir) -> None:
     except Exception:
         pass
 
-    save_file_dir = (
-        os.path.join(base_dir, config["basic"]["save_file_dir"])
-        if not os.path.isabs(config["basic"]["save_file_dir"])
-        else config["basic"]["save_file_dir"]
-    )
-    save_file_dir = os.path.abspath(save_file_dir)
+    save_file_dir = config["basic"]["save_file_dir"]
     default_task = config["basic"]["default_task"]
     default_website = config["basic"]["default_website"]
 
     # Experiment settings
-    task_file_path = (
-        os.path.join(base_dir, config["experiment"]["task_file_path"])
-        if not os.path.isabs(config["experiment"]["task_file_path"])
-        else config["experiment"]["task_file_path"]
-    )
+    task_file_path = config["experiment"]["task_file_path"]
     overwrite = config["experiment"]["overwrite"]
     top_k = config["experiment"]["top_k"]
     fixed_choice_batch_size = config["experiment"]["fixed_choice_batch_size"]
@@ -282,11 +276,11 @@ async def main(config, base_dir) -> None:
 
         # 定义 cookies 路径映射
         domain_cookies = {
-            "amazon": "./cookies/amazon.json",
-            "github": "./cookies/github.json",
-            "twitter": "./cookies/twitter_1.json",
-            "arxiv": "./cookies/arxiv.json",
-            "mastodon": "./cookies/mastodon.json",
+            "amazon": "src/scene/web/cookies/amazon.json",
+            "github": "src/scene/web/cookies/github.json",
+            "twitter": "src/scene/web/cookies/twitter_1.json",
+            "arxiv": "src/scene/web/cookies/arxiv.json",
+            "mastodon": "src/scene/web/cookies/mastodon.json",
         }
         # 任务处理映射
         task_messages = {
@@ -304,7 +298,9 @@ async def main(config, base_dir) -> None:
 
         # 处理任务
         if found_keywords:
-            cookies_path = "./cookies/twitter_1.json"  # 默认 Twitter cookies
+            cookies_path = (
+                "src/scene/web/cookies/twitter_1.json"  # 默认 Twitter cookies
+            )
             keyword = found_keywords[0]  # 取匹配到的第一个关键词
             confirmed_task = task_messages.get(keyword, task_messages["default"])(
                 confirmed_task
@@ -375,7 +371,7 @@ async def main(config, base_dir) -> None:
             session_control.context.on("page", page_on_open_handler)
 
             # bypass login
-            # with open('./cookies/taobao.json', 'r') as f:
+            # with open('src/scene/web/cookies/taobao.json', 'r') as f:
             if cookies_path:
                 with open(cookies_path, "r") as f:
                     cookies = json.load(f)
@@ -391,8 +387,14 @@ async def main(config, base_dir) -> None:
                 logger.info(e)
             await asyncio.sleep(1)
 
-            site = next((k for k, v in domain_cookies.items() if v == cookies_path), None)
-            if site in ["amazon", "github", "twitter"]:  # 只有这些站点支持 is_logged_in 判断
+            site = next(
+                (k for k, v in domain_cookies.items() if v == cookies_path), None
+            )
+            if site in [
+                "amazon",
+                "github",
+                "twitter",
+            ]:  # 只有这些站点支持 is_logged_in 判断
                 if await is_logged_in(site, session_control.active_page):
                     print(f"✅ Logged in to {site} using cookies.")
                 else:
@@ -1359,7 +1361,7 @@ if __name__ == "__main__":
         help="Path to the TOML configuration file.",
         type=str,
         metavar="config",
-        default=f"{os.path.join('config', 'demo_mode.toml')}",
+        default=f"{os.path.join('src/scene/web/src/config', 'demo_mode.toml')}",
     )
     parser.add_argument("--model_name", type=str, default="gpt-4o-2024-08-06")
     parser.add_argument("--save_file_dir", type=str, default=None)
@@ -1367,21 +1369,11 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Load configuration file
-    base_dir = os.path.dirname(os.path.abspath(__file__))
     config = None
     try:
-        with open(
-            (
-                os.path.join(base_dir, args.config_path)
-                if not os.path.isabs(args.config_path)
-                else args.config_path
-            ),
-            "r",
-        ) as toml_config_file:
+        with open(args.config_path, "r") as toml_config_file:
             config = toml.load(toml_config_file)
-            print(
-                f"Configuration File Loaded - {os.path.join(base_dir, args.config_path)}"
-            )
+            print(f"Configuration File Loaded - {args.config_path}")
     except FileNotFoundError:
         print(f"Error: File '{args.config_path}' not found.")
     except toml.TomlDecodeError:
@@ -1390,4 +1382,4 @@ if __name__ == "__main__":
     config["model"]["model"] = args.model_name
     config["experiment"]["task_file_path"] = args.task_file_path
 
-    asyncio.run(main(config, base_dir))
+    asyncio.run(main(config))

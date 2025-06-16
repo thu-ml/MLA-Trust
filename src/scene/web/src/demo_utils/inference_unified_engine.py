@@ -1,10 +1,12 @@
+import os
+
 from dotenv import load_dotenv
 
-from models import ModelRegistry
-from models.base import BaseChat
-from models.openai_chat import OpenAIChat
+from src.models import ModelRegistry
+from src.models.base import BaseChat
+from src.models.openai_chat import OpenAIChat
 
-load_dotenv()
+load_dotenv(dotenv_path=os.getenv("DOTENV_PATH", ".env"))
 
 
 class UnifiedEngine:
