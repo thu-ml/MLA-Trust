@@ -6,4 +6,3 @@ screenshot/
 .vscode/
 temp/
 *.zip
-scripts/run_task_local.sh

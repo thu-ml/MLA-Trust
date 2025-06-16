@@ -146,12 +146,12 @@ If you find this work useful, please consider citing our paper:
 }
 ```
 
-## 🤝 Contributing
-
-We welcome contributions! Please feel free to submit issues and pull requests.
+## 🤝 Acknowledgement
+This project is primarily based on [Mobile-Agent-E](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E) and [SeeAct](https://github.com/OSU-NLP-Group/SeeAct).
 
 ## 📞 Contact
 
+We welcome contributions! Please feel free to submit issues and pull requests.
 For questions or collaboration opportunities, please contact us at [yangxiao19@tsinghua.org.cn,52285904015@stu.ecnu.edu.cn]
 
 ---
