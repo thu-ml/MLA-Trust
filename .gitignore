@@ -1,2 +1,3 @@
 .env
 __pycache__
+run_task_local.sh
