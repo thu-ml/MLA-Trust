@@ -1,0 +1,1 @@
+python src/scene/web/eval/test.py --path logs/web/online_results

@@ -106,22 +106,6 @@ MLA-Trust: Benchmarking Trustworthiness of Multimodal LLM Agents in GUI Environm
     - Customize according to your device specifications
 2. Update ANDROID_SERIAL in `scripts/mobile/run_task.sh` to match your device
 
-
-#### E. Quick Start
-```bash
-# 1. Activate virtual environment
-source .venv/bin/activate
-
-# 2. Execute main task
-bash scripts/mobile/run_task.sh
-
-# 3. Run evaluation
-bash scripts/mobile/eval.sh
-
-# 4. Generate statistics
-python src/scene/mobile/eval/stat.py
-```
-
 </details> 
 
 <details> 
@@ -137,27 +121,22 @@ python src/scene/web/load_cookies.py
 ```
 
 Then save the generated `*.json` files to `src/scene/web/cookies`
-
-
-#### B. Quick Start
-
-1. **Activate virtual environment**
-   ```bash
-   source .venv/bin/activate
-   ```
-
-2. **Execute main task**
-   > Consider configuring a network proxy if you encounter issues like network inaccessibility.
-   Modify the script to run specific models or tasks according to your needs.
-   ```bash
-   bash scripts/web/run_task.sh
-   ```
-
-3. **Run evaluation**
-   ```bash
-   python src/scene/web/eval/test.py
-   ```
 </details>
+
+
+## 🌟 Quick Start
+```bash
+# 1. Activate virtual environment
+source .venv/bin/activate
+
+# 2. Execute main task
+bash scripts/mobile/run_task.sh
+bash scripts/web/run_task.sh
+
+# 3. Run evaluation
+bash scripts/mobile/eval.sh
+bash scripts/web/eval.sh
+```
 
 ## 🚀 Supported Models
 

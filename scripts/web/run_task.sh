@@ -1,4 +1,5 @@
-export HF_HUB_OFFLINE=1
+# Note: Configure a network proxy if you encounter network unreachability issues
+
 export PYTHONASYNCIODEBUG=1 
 export PYTHONUNBUFFERED=1 
 export CUDA_VISIBLE_DEVICES=0
