@@ -114,12 +114,12 @@ The following models are supported:
 
 
 ## 🤝 Acknowledgement
-This project is primarily based on [Mobile-Agent-E](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E) and [SeeAct](https://github.com/OSU-NLP-Group/SeeAct).
+We acknowledge and thank the projects [Mobile-Agent-E](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E) and [SeeAct](https://github.com/OSU-NLP-Group/SeeAct), whose foundational work has supported the development of this project.
 
 ## 📞 Contact
 
 We welcome contributions! Please feel free to submit issues and pull requests.
-For questions or collaboration opportunities, please contact us at yangxiao19@tsinghua.org.cn, 52285904015@stu.ecnu.edu.cn
+For questions or collaboration opportunities, please contact us at jankinfmail@gmail.com, 52285904015@stu.ecnu.edu.cn, yangxiao19@tsinghua.org.cn
 
 ## 🌟 Citation
 
