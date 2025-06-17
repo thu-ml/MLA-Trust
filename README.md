@@ -214,8 +214,7 @@ We acknowledge and thank the projects [Mobile-Agent-E](https://github.com/X-PLUG
 
 ## 📞 Contact
 
-We welcome contributions and collaboration! Please feel free to submit issues and pull requests.
-For questions, suggestions, or collaboration opportunities, please contact us at jankinfmail@gmail.com, 52285904015@stu.ecnu.edu.cn, yangxiao19@tsinghua.org.cn
+For questions, suggestions or collaboration opportunities, please contact us at jankinfmail@gmail.com, 52285904015@stu.ecnu.edu.cn, yangxiao19@tsinghua.org.cn
 
 ## 🌟 Citation
 
