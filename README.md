@@ -65,12 +65,7 @@ MLA-Trust: Benchmarking Trustworthiness of Multimodal LLM Agents in GUI Environm
 <details> 
 <summary> 📱 Mobile Setup</summary>
 
-#### A. Device Specifications 
-- Device: Redmi Note 13 Pro
-- Operating System: Xiaomi HyperOS 2.0.6.0
-
-
-#### B. ADB Setup and Configuration
+#### A. ADB Setup and Configuration
 > Reference: [Mobile-Agent-E Repository](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E)
 
 1. **Install Android Debug Bridge (ADB)**
@@ -95,24 +90,21 @@ MLA-Trust: Benchmarking Trustworthiness of Multimodal LLM Agents in GUI Environm
    ```
 
 
-#### C. Environment Configuration
-1. Create `.env` file in root directory
-2. Refer to `src/scene/mobile/inference_agent_E.py` and configure environment variables
-
-#### D. Task Preconditions
+#### B. Task Preconditions
 1. Modify `scripts/mobile/adb.sh` script for device setup
-    - Script functions: 1) Unlock device; 2) Return to home screen;
+    - Script functions: (a) Unlock device; (b) Return to home screen;
     - Must execute before each task
     - Customize according to your device specifications
 2. Update ANDROID_SERIAL in `scripts/mobile/run_task.sh` to match your device
 
+> Our experimental equipment and operating system versions are as follows: (a) Device: Redmi Note 13 Pro; (b) Operating System: Xiaomi HyperOS 2.0.6.0
 </details> 
 
 <details> 
 <summary> 🌐 Website Setup</summary>
 
 
-#### A. Preparation
+#### A. Task Preconditions
 
 Since many tasks require a login to function properly, we provide cookie loading functionality to enable the agent to work correctly. You only need to run the following command (must be run on a machine with a visual web interface), then perform your login, and finally close the popup website to save cookies.
 
@@ -125,15 +117,24 @@ Then save the generated `*.json` files to `src/scene/web/cookies`
 
 
 ## 🌟 Quick Start
+1. Configure environment variables
 ```bash
-# 1. Activate virtual environment
-source .venv/bin/activate
+cp .env.template .env
+```
 
-# 2. Execute main task
+2. Activate virtual environment
+```bash
+source .venv/bin/activate
+```
+
+3. Execute main task
+```bash
 bash scripts/mobile/run_task.sh
 bash scripts/web/run_task.sh
+```
 
-# 3. Run evaluation
+4. Run evaluation
+```bash
 bash scripts/mobile/eval.sh
 bash scripts/web/eval.sh
 ```
