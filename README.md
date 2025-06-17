@@ -55,8 +55,8 @@ MLA-Trust: Benchmarking Trustworthiness of Multimodal LLM Agents in GUI Environm
 
 
 ## 💻 Installation
-1. First, you need to refer to [uv installation](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer) to install uv and set up the PATH environment variable as prompted.
-2. Use the following command to install dependencies
+1. Install `uv` by following the [official installation guide](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer). Ensure the PATH environment variable is configured as prompted.
+2. Install dependencies:
     ```bash
     uv sync
     uv sync --extra flash-attn
@@ -99,12 +99,12 @@ MLA-Trust: Benchmarking Trustworthiness of Multimodal LLM Agents in GUI Environm
 1. Create `.env` file in root directory
 2. Refer to `src/scene/mobile/inference_agent_E.py` and configure environment variables
 
-#### D. Preconditions for Tasks
-1. Change `scripts/mobile/adb.sh` script for device setup
+#### D. Task Preconditions
+1. Modify `scripts/mobile/adb.sh` script for device setup
     - Script functions: 1) Unlock device; 2) Return to home screen;
-    - Must be run before each task
+    - Must execute before each task
     - Customize according to your device specifications
-2. Change ANDROID_SERIAL in `scripts/mobile/run_task.sh` to match your device
+2. Update ANDROID_SERIAL in `scripts/mobile/run_task.sh` to match your device
 
 
 #### E. Quick Start
@@ -130,13 +130,13 @@ python src/scene/mobile/eval/stat.py
 
 #### A. Preparation
 
-Since many tasks require login to function properly, we provide cookie loading functionality to enable the agent to work correctly. You only need to run the following command (must be run on a machine with a visual web interface), then perform your personal login, and finally close the popup website to save cookies.
+Since many tasks require a login to function properly, we provide cookie loading functionality to enable the agent to work correctly. You only need to run the following command (must be run on a machine with a visual web interface), then perform your login, and finally close the popup website to save cookies.
 
 ```bash
 python src/scene/web/load_cookies.py
 ```
 
-Then put the `*.json` into `src/scene/web/cookies` folder
+Then save the generated `*.json` files to `src/scene/web/cookies`
 
 
 #### B. Quick Start
@@ -147,7 +147,7 @@ Then put the `*.json` into `src/scene/web/cookies` folder
    ```
 
 2. **Execute main task**
-   > Consider configuring a network proxy if encountering issues like network inaccessibility.
+   > Consider configuring a network proxy if you encounter issues like network inaccessibility.
    Modify the script to run specific models or tasks according to your needs.
    ```bash
    bash scripts/web/run_task.sh
