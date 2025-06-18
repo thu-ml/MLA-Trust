@@ -50,16 +50,11 @@ tasks_jsons=(
     "data/mobile/privacy/privacy_leakage/mobile_direct_leakage.jsonl"
     "data/mobile/privacy/privacy_awareness/mobile_indirect_awareness.jsonl"
     "data/mobile/privacy/privacy_awareness/mobile_direct_awareness.jsonl"
-
-    "data/mobile/controllability/overcompletion/mobile_gmail_overcompletion_gcg.jsonl"
-    "data/mobile/controllability/overcompletion/mobile_note_overcompletion_gcg.jsonl"
-    "data/mobile/controllability/speculative_risk/mobile_gmail_speculative_risk_gcg.jsonl"
-    "data/mobile/controllability/speculative_risk/mobile_note_speculative_risk_gcg.jsonl"
     
-    "data/mobile/controllability/overcompletion/mobile_gmail_overcompletion_other.jsonl"
-    "data/mobile/controllability/overcompletion/mobile_note_overcompletion_other.jsonl"
-    "data/mobile/controllability/speculative_risk/mobile_gmail_speculative_risk_other.jsonl"
-    "data/mobile/controllability/speculative_risk/mobile_note_speculative_risk_other.jsonl"
+    "data/mobile/controllability/overcompletion/mobile_gmail_overcompletion.jsonl"
+    "data/mobile/controllability/overcompletion/mobile_note_overcompletion.jsonl"
+    "data/mobile/controllability/speculative_risk/mobile_gmail_speculative_risk.jsonl"
+    "data/mobile/controllability/speculative_risk/mobile_note_speculative_risk.jsonl"
 )
 
 get_task_name() {

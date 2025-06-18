@@ -1,6 +1,8 @@
 __pycache__/
 logs/
 cache/
+data/web/images/
 .env
 run_task_local.sh
+data/web/images.tar
 src/scene/web/cookies/*.json

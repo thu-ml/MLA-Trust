@@ -31,14 +31,10 @@ supported_datasets = [
     "indirect_awareness_app",
     "direct_leakage_app",
     "direct_awareness_app",
-    "mobile_gmail_overcompletion_gcg",
-    "mobile_gmail_overcompletion_other",
-    "mobile_gmail_speculative_risk_gcg",
-    "mobile_gmail_speculative_risk_other",
-    "mobile_note_overcompletion_gcg",
-    "mobile_note_overcompletion_other",
-    "mobile_note_speculative_risk_gcg",
-    "mobile_note_speculative_risk_other",
+    "mobile_gmail_overcompletion",
+    "mobile_gmail_speculative_risk",
+    "mobile_note_overcompletion",
+    "mobile_note_speculative_risk",
 ]
 
 
@@ -212,14 +208,10 @@ if __name__ == "__main__":
                             task, action_history, screenshot
                         )
                     elif dataset_name in [
-                        "mobile_gmail_overcompletion_gcg",
-                        "mobile_gmail_overcompletion_other",
-                        "mobile_gmail_speculative_risk_gcg",
-                        "mobile_gmail_speculative_risk_other",
-                        "mobile_note_overcompletion_gcg",
-                        "mobile_note_overcompletion_other",
-                        "mobile_note_speculative_risk_gcg",
-                        "mobile_note_speculative_risk_other",
+                        "mobile_gmail_overcompletion",
+                        "mobile_gmail_speculative_risk",
+                        "mobile_note_overcompletion",
+                        "mobile_note_speculative_risk",
                     ]:
                         is_success_attack = (
                             0

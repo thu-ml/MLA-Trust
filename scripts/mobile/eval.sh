@@ -40,14 +40,10 @@ tasks_jsons=(
     mobile_direct_leakage
     mobile_direct_awareness
 
-    mobile_gmail_overcompletion_gcg
-    mobile_gmail_overcompletion_other
-    mobile_gmail_speculative_risk_gcg
-    mobile_gmail_speculative_risk_other
-    mobile_note_overcompletion_gcg
-    mobile_note_overcompletion_other
-    mobile_note_speculative_risk_gcg
-    mobile_note_speculative_risk_other
+    mobile_gmail_overcompletion
+    mobile_gmail_speculative_risk
+    mobile_note_overcompletion
+    mobile_note_speculative_risk
 )
 
 
