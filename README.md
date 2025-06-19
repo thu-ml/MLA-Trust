@@ -18,7 +18,7 @@ MLA-Trust: Benchmarking Trustworthiness of Multimodal LLM Agents in GUI Environm
 
 ---
 
-🛡️ **MLA-Trust** is a comprehensive and unified framework that evaluates the MLA trustworthiness across four principled dimensions: **truthfulness**, **controllability**, **safety** and **privacy**. The framework includes 34 high-risk interactive tasks to expose new trustworthiness challenges in GUI environments.
+🛡️ **[MLA-Trust](https://arxiv.org/abs/2506.01616)** is a comprehensive and unified framework that evaluates the MLA trustworthiness across four principled dimensions: **truthfulness**, **controllability**, **safety** and **privacy**. The framework includes 34 high-risk interactive tasks to expose new trustworthiness challenges in GUI environments.
 
 ![Framework](assets/framework.jpg)
 
