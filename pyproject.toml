@@ -3,9 +3,10 @@ name = "mla-trust"
 version = "0.1.0"
 description = "mla-trust"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.13"
 dependencies = [
     "accelerate==1.5.2",
+    "addict>=2.4.0",
     "aioconsole==0.8.1",
     "aiohappyeyeballs==2.4.6",
     "aiohttp==3.11.12",
@@ -69,7 +70,6 @@ dependencies = [
     "httplib2==0.22.0",
     "httptools==0.6.4",
     "httpx==0.27.2",
-    "huggingface-hub==0.28.1",
     "idna==3.10",
     "importlib-metadata==8.6.1",
     "iniconfig==2.0.0",
@@ -96,6 +96,7 @@ dependencies = [
     "mkl-fft==1.3.11",
     "mkl-random==1.2.8",
     "mkl-service==2.4.0",
+    "modelscope>=1.33.0",
     "mpmath==1.3.0",
     "msgpack==1.1.0",
     "msgspec==0.19.0",
@@ -120,6 +121,7 @@ dependencies = [
     "nvidia-nvtx-cu12==12.4.127",
     "open-clip-torch==2.31.0",
     "openai==1.65.1",
+    "opencv-python>=4.11.0.86",
     "opencv-python-headless==4.11.0.86",
     "outlines==0.1.11",
     "outlines-core==0.1.26",
@@ -174,7 +176,6 @@ dependencies = [
     "safetensors==0.5.2",
     "scikit-learn==1.6.1",
     "scipy==1.15.2",
-    "sentence-transformers==3.4.1",
     "sentencepiece==0.2.0",
     "setuptools==77.0.3",
     "shellingham==1.5.4",
@@ -190,14 +191,13 @@ dependencies = [
     "threadpoolctl==3.5.0",
     "tiktoken==0.9.0",
     "timm==1.0.15",
-    "tokenizers==0.21.0",
     "toml==0.10.2",
     "tomli==2.2.1",
     "torch==2.5.1",
     "torchaudio==2.5.1",
     "torchvision==0.20.1",
     "tqdm==4.67.1",
-    "transformers==4.49.0",
+    "transformers>=4.57.0",
     "triton==3.1.0",
     "typer==0.15.2",
     "typing-extensions==4.12.2",
