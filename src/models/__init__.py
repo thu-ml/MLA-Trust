@@ -12,9 +12,13 @@ class ModelRegistry:
     MODEL_MAPPINGS = {
         "gpt-4o-2024-11-20": ("openai_chat", "OpenAIChat"),
         "gpt-4-turbo": ("openai_chat", "OpenAIChat"),
+        "gpt-4o-mini": ("openai_chat", "OpenAIChat"),
+        "gpt-5.2-2025-12-11": ("openai_chat", "OpenAIChat"),
         "gemini-2.0-flash": ("openai_chat", "OpenAIChat"),
         "gemini-2.0-pro-exp-02-05": ("openai_chat", "OpenAIChat"),
+        "gemini-3-pro-preview": ("openai_chat", "OpenAIChat"),
         "claude-3-7-sonnet-20250219": ("openai_chat", "OpenAIChat"),
+        "claude-sonnet-4-5-20250929": ("openai_chat", "OpenAIChat"),
         "llava-hf/llava-v1.6-mistral-7b-hf": ("llava_next_chat", "LlavaNextChat"),
         "lmms-lab/llava-onevision-qwen2-72b-ov-sft": ("llava_ov_chat", "LlavaOVChat"),
         "lmms-lab/llava-onevision-qwen2-72b-ov-chat": ("llava_ov_chat", "LlavaOVChat"),
