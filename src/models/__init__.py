@@ -25,6 +25,8 @@ class ModelRegistry:
         "mistral-community/pixtral-12b": ("pixtral_chat", "PixtralChat"),
         "microsoft/Phi-4-multimodal-instruct": ("phi_chat", "PhiChat"),
         "OpenGVLab/InternVL2-8B": ("internvl2_chat", "InternVL2Chat"),
+        "OpenGVLab/InternVL3_5-8B": ("internvl3_5_chat", "InternVL3_5Chat"),
+        "Qwen/Qwen3-VL-8B-Instruct": ("qwen3_chat", "Qwen3VLChat"),
     }
 
     _registered_models: Dict[str, Type] = {}
