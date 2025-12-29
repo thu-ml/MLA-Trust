@@ -21,5 +21,5 @@ if __name__ == "__main__":
     system_prompt = "You are a helpful assistant."
     user_prompt = "Describe this image."
     prompt = [system_prompt, user_prompt]
-    output = engine.generate(prompt=prompt, image_path="snowman.jpg", turn_number=0)
+    output = engine.generate(prompt=prompt, image_path="playground/data/snowman.jpg", turn_number=0)
     print(output)
