@@ -19,7 +19,7 @@ class ModelRegistry:
         "lmms-lab/llava-onevision-qwen2-72b-ov-sft": ("llava_ov_chat", "LlavaOVChat"),
         "lmms-lab/llava-onevision-qwen2-72b-ov-chat": ("llava_ov_chat", "LlavaOVChat"),
         "microsoft/Magma-8B": ("magma_chat", "MagmaChat"),
-        "Qwen/Qwen2.5-VL-7B-Instruct": ("qwen_chat", "QwenChat"),
+        "Qwen/Qwen2.5-VL-7B-Instruct": ("qwen2_5_chat", "Qwen2_5VLChat"),
         "deepseek-ai/deepseek-vl2": ("deepseek_chat", "DeepSeekVL2Chat"),
         "openbmb/MiniCPM-o-2_6": ("minicpm_chat", "MiniCPMOChat"),
         "mistral-community/pixtral-12b": ("pixtral_chat", "PixtralChat"),

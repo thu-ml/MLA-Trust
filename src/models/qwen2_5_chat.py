@@ -5,7 +5,7 @@ from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 from .base import BaseChat
 
 
-class QwenChat(BaseChat):
+class Qwen2_5VLChat(BaseChat):
     def __init__(self, model_name="Qwen/Qwen2.5-VL-7B-Instruct"):
         self.processor = AutoProcessor.from_pretrained(model_name)
         self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(

@@ -159,7 +159,7 @@ class InternVL2Chat(BaseChat):
                 history.append((prompt,))
             else:
                 assert role == "assistant"
-                history[-1] = (history[-1], prompt)
+                history[-1] = (history[-1][0], prompt)
 
             for image_url in image_urls:
                 pixel_values_list.append(
