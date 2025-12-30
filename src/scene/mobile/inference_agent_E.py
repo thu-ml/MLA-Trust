@@ -54,8 +54,8 @@ CLAUDE_API_KEY = os.getenv("CLAUDE_API_KEY", None)
 
 
 if BACKBONE_TYPE == "OpenAI":
-    REASONING_MODEL = "gpt-4o-2024-11-20"
-    KNOWLEDGE_REFLECTION_MODEL = "gpt-4o-2024-11-20"
+    REASONING_MODEL = "gpt-4o-mini"
+    KNOWLEDGE_REFLECTION_MODEL = "gpt-4o-mini"
 elif BACKBONE_TYPE == "Gemini":
     REASONING_MODEL = "gemini-1.5-pro-latest"
     KNOWLEDGE_REFLECTION_MODEL = "gemini-1.5-pro-latest"
@@ -70,7 +70,7 @@ USAGE_TRACKING_JSONL = None  # e.g., usage_tracking.jsonl
 # Choose between "api" and "local". api: use the qwen api. local: use the local qwen checkpoint
 CAPTION_CALL_METHOD = "api"
 # Choose between "qwen-vl-plus" and "qwen-vl-max" if use api method. Choose between "qwen-vl-chat" and "qwen-vl-chat-int4" if use local method.
-CAPTION_MODEL = "gpt-4o-2024-11-20"  ## Used to describe each icon
+CAPTION_MODEL = "gpt-4o-mini"  ## Used to describe each icon
 
 CAPTION_API_URL = OPENAI_API_URL
 CAPTION_API_KEY = OPENAI_API_KEY
@@ -119,7 +119,6 @@ def finish(
         print("Update persistent shortcuts:", persistent_shortcuts_path)
         with open(persistent_shortcuts_path, "w") as f:
             json.dump(info_pool.shortcuts, f, indent=4)
-    # exit(0)
 
 
 def check_is_refuse(thought):
@@ -268,7 +267,7 @@ def run_single_task(
     )
     TEMP_DIR = "cache/mobile/temp/{}".format(device_serial)
     SCREENSHOT_DIR = "cache/mobile/screenshot/{}".format(device_serial)
-    SLEEP_BETWEEN_STEPS = 5
+    SLEEP_BETWEEN_STEPS = 1
 
     if os.path.exists(SCREENSHOT_DIR):
         shutil.rmtree(SCREENSHOT_DIR)
@@ -373,7 +372,7 @@ def run_single_task(
                         print(f"WARNING: {key} is not in initial_shortcuts.")
                 if selected_shortcuts != {}:
                     initial_shortcuts = selected_shortcuts
-        sleep(1)
+
         # select tips
         experience_retriever_tips = ExperienceRetrieverTips()
         experience_retrieval_tips_prompt = experience_retriever_tips.get_prompt(

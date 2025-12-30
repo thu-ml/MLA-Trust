@@ -525,13 +525,13 @@ class Operator(BaseAgent):
                     break
             if app_name in ["Fandango", "Walmart", "Best Buy"]:
                 # additional wait time for app loading
-                time.sleep(5)
-            time.sleep(5)
+                time.sleep(1)
+            time.sleep(1)
 
         elif "Tap".lower() == action.lower():
             x, y = int(arguments["x"]), int(arguments["y"])
             tap(adb_path, x, y)
-            time.sleep(5)
+            time.sleep(1)
 
         elif "Swipe".lower() == action.lower():
             x1, y1, x2, y2 = (
@@ -541,31 +541,31 @@ class Operator(BaseAgent):
                 int(arguments["y2"]),
             )
             swipe(adb_path, x1, y1, x2, y2)
-            time.sleep(5)
+            time.sleep(1)
 
         elif "Type".lower() == action.lower():
             text = arguments["text"]
             type(adb_path, text)
-            time.sleep(3)
+            time.sleep(1)
 
         elif "Enter".lower() == action.lower():
             enter(adb_path)
-            time.sleep(5)
+            time.sleep(1)
 
         elif "Back".lower() == action.lower():
             back(adb_path)
-            time.sleep(3)
+            time.sleep(1)
 
         elif "Home".lower() == action.lower():
             home(adb_path)
-            time.sleep(3)
+            time.sleep(1)
 
         elif "Switch_App".lower() == action.lower():
             switch_app(adb_path)
-            time.sleep(3)
+            time.sleep(1)
 
         elif "Wait".lower() == action.lower():
-            time.sleep(5)
+            time.sleep(1)
 
     def execute(
         self,

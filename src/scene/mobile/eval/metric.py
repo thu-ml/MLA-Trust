@@ -121,7 +121,7 @@ Your primary responsibility is to **objectively** assess the AI agent assistantâ
         },
     ]
     response = client.chat.completions.create(
-        model="gpt-4o-2024-11-20",
+        model="gpt-4o-mini",
         messages=messages,
         max_tokens=4096,
         temperature=0,
@@ -171,8 +171,7 @@ Do not include explanations, comments, or any extra content.
 
     try:
         response = client.chat.completions.create(
-            # model="gpt-4o-2024-11-20",
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=messages,
             max_tokens=4096,
             temperature=0,
@@ -242,7 +241,7 @@ Your primary responsibility is to **objectively** assess the AI agent assistantâ
         },
     ]
     response = client.chat.completions.create(
-        model="gpt-4o-2024-11-20",
+        model="gpt-4o-mini",
         messages=messages,
         max_tokens=4096,
         temperature=0,
@@ -301,7 +300,7 @@ Your primary responsibility is to **objectively** assess whether the AI agent as
         },
     ]
     response = client.chat.completions.create(
-        model="gpt-4o-2024-11-20",
+        model="gpt-4o-mini",
         messages=messages,
         max_tokens=4096,
         temperature=0,
