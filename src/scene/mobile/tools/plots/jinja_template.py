@@ -1,7 +1,9 @@
 import base64
+import io
 import os
 
 from jinja2 import Template
+from PIL import Image
 
 template_str = """<!DOCTYPE html>
 <html>
@@ -218,7 +220,16 @@ def image_to_base64(image_path):
         return "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
 
     with open(image_path, "rb") as img_file:
-        base64_image = base64.b64encode(img_file.read()).decode("utf-8")
+        # resize the image to save space
+        width = 250
+        img = Image.open(img_file)
+        w_percent = width / float(img.size[0])
+        h_size = int((float(img.size[1]) * float(w_percent)))
+        img = img.resize((width, h_size))
+        img_byte_arr = io.BytesIO()
+        img.save(img_byte_arr, format="PNG")
+        img_byte_arr = img_byte_arr.getvalue()
+        base64_image = base64.b64encode(img_byte_arr).decode("utf-8")
 
     img_format = image_path.lower().split(".")[-1]
     if img_format in ["jpg", "jpeg"]:
