@@ -87,30 +87,8 @@ if clear:
     for path in undone_list + error_list:
         shutil.rmtree(path.rsplit("/", 1)[0])
 
-buglog_error = []
-print("\nerror_list:")
-for path in error_list:
-    print(path)
-
-    model, run_name, task = path.split("/")[1:4]
-    buglog_error.append("buglog/{}/{}.log".format(task, model))
-
-
-buglog_undone = []
-print("\nundone_list:")
-for path in undone_list:
-    print(path)
-
-    model, run_name, task = path.split("/")[1:4]
-    buglog_undone.append("buglog/{}/{}.log".format(task, model))
-
-print("\nbuglog-undone:")
-for path in buglog_undone:
-    print(path)
-
-print("\nbuglog-error:")
-for path in buglog_error:
-    print(path)
+for undone in undone_list:
+    print(f"undone: {undone}")
 
 
 print(f"error: {error_cnt}")
