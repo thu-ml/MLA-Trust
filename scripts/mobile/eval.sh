@@ -3,7 +3,6 @@ export PYTHONUNBUFFERED=1
 
 run_name=demo
 
-
 model_names=(
     claude-3-7-sonnet-20250219
     deepseek-vl2
@@ -18,6 +17,11 @@ model_names=(
     Qwen2.5-VL-7B-Instruct
     InternVL2-8B
     Phi-4-multimodal-instruct
+    InternVL3_5-8B
+    Qwen3-VL-8B-Instruct
+    gpt-5.2-2025-12-11
+    gemini-3-pro-preview
+    claude-sonnet-4-5-20250929
 )
 
 tasks_jsons=(

@@ -105,6 +105,7 @@ dependencies = [
     "multidict==6.1.0",
     "multiprocess==0.70.16",
     "mypy-extensions==1.0.0",
+    "natsort>=8.4.0",
     "nest-asyncio==1.6.0",
     "networkx==3.4.2",
     "numba==0.60.0",

@@ -48,10 +48,10 @@ for path in paths:
     model_count[model_name] += 1
 
 pprint(model_count)
-# pprint(task_count)
+pprint(task_count)
 
-# clear = False
-clear = True
+clear = False
+# clear = True
 
 done_cnt = 0
 undone_cnt = 0
