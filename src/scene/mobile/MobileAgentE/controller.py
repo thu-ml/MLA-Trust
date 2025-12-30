@@ -1,6 +1,9 @@
 import os
 import subprocess
+import time
 from time import sleep
+
+from PIL import Image, UnidentifiedImageError
 
 
 def check_file_exists(adb_path, file_path):
@@ -10,121 +13,75 @@ def check_file_exists(adb_path, file_path):
 
 
 def get_screenshot(
-    adb_path, device_serial, SCREENSHOT_DIR="./screenshot", max_retry=10
+    adb_path,
+    device_serial,
+    SCREENSHOT_DIR="./screenshot",
+    max_retry=10,
 ):
     assert device_serial is not None, "Device serial cannot be None"
 
     os.makedirs(SCREENSHOT_DIR, exist_ok=True)
 
-    save_path = os.path.join(SCREENSHOT_DIR, "screenshot_{}.png".format(device_serial))
+    local_path = os.path.join(SCREENSHOT_DIR, f"screenshot_{device_serial}.png")
+    remote_path = f"/sdcard/__screenshot_{device_serial}.png"
 
-    # file_on_phone = "/sdcard/screenshot_{}.png".format(device_serial)
-    # image_path = os.path.join(SCREENSHOT_DIR, "screenshot_{}.png".format(device_serial))
-    # save_path = os.path.join(SCREENSHOT_DIR, "screenshot_{}.jpg".format(device_serial))
-
-    retry = 0
-    success = False
     last_error = None
 
-    while retry <= max_retry:
+    for retry in range(max_retry + 1):
         try:
             print(f"Retry count: {retry}/{max_retry}")
 
-            screencap_command = adb_path + " exec-out screencap -p > {}".format(
-                save_path
-            )
-            print(screencap_command)
+            # screenshot process: 1. screencap on phone,  2. pull to local,  3. validate,  4. clean up on phone
             subprocess.run(
-                screencap_command,
-                capture_output=True,
-                text=True,
+                f"{adb_path} shell screencap -p {remote_path}",
                 shell=True,
                 check=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.PIPE,
+                text=False,
             )
 
-            # delete_command = adb_path + " shell rm -f {}".format(file_on_phone)
-            # print(delete_command)
-            # subprocess.run(
-            #     delete_command, capture_output=True, text=True, shell=True, check=True
-            # )
+            subprocess.run(
+                f"{adb_path} pull {remote_path} {local_path}",
+                shell=True,
+                check=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.PIPE,
+                text=False,
+            )
 
-            # if os.path.exists(image_path):
-            #     os.remove(image_path)
-            # if os.path.exists(save_path):
-            #     os.remove(save_path)
+            if not os.path.exists(local_path):
+                raise RuntimeError("Screenshot file not found after adb pull")
 
-            # screencap_command = adb_path + " shell screencap -p {}".format(
-            #     file_on_phone
-            # )
-            # subprocess.run(
-            #     screencap_command,
-            #     capture_output=True,
-            #     text=True,
-            #     shell=True,
-            #     check=True,
-            # )
-            # print(screencap_command)
+            if os.path.getsize(local_path) < 1024:
+                raise RuntimeError("Screenshot file too small, capture likely failed")
 
-            # timeout = 5
-            # start_time = time.time()
-            # while not check_file_exists(adb_path=adb_path, file_path=file_on_phone):
-            #     time.sleep(0.1)
-            #     if time.time() - start_time > timeout:
-            #         raise TimeoutError(
-            #             f"Screenshot file not created on device after {timeout} seconds"
-            #         )
+            try:
+                with Image.open(local_path) as img:
+                    img.load()
+            except UnidentifiedImageError as e:
+                raise RuntimeError("Pulled file is not a valid PNG") from e
 
-            # size_check_command = adb_path + f" shell ls -l {file_on_phone}"
-            # subprocess.run(
-            #     size_check_command,
-            #     capture_output=True,
-            #     text=True,
-            #     shell=True,
-            #     check=True,
-            # )
-            # print(size_check_command)
+            subprocess.run(
+                f"{adb_path} shell rm -f {remote_path}",
+                shell=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                text=False,
+            )
 
-            # pull_command = adb_path + " pull {} {}".format(
-            #     file_on_phone, SCREENSHOT_DIR
-            # )
-            # subprocess.run(
-            #     pull_command, capture_output=True, text=True, shell=True, check=True
-            # )
-            # print(pull_command)
-
-            # timeout = 5
-            # start_time = time.time()
-            # while not os.path.exists(image_path):
-            #     time.sleep(0.1)
-            #     if time.time() - start_time > timeout:
-            #         raise TimeoutError(
-            #             f"Screenshot file not available locally after {timeout} seconds"
-            #         )
-
-            # if os.path.getsize(image_path) == 0:
-            #     raise ValueError("Local screenshot file has zero size")
-
-            # Image.open(image_path).convert("RGB").save(save_path, "JPEG")
-            # os.remove(image_path)
-
-            # delete_command = adb_path + " shell rm -f {}".format(file_on_phone)
-            # subprocess.run(delete_command, capture_output=True, text=True, shell=True)
-
-            success = True
             print(f"Screenshot successfully captured after {retry} retries")
-            break
+            return local_path
 
         except Exception as e:
             last_error = e
-            retry += 1
-            print(f"Error: {str(e)}")
+            print(f"Error: {e}")
+            time.sleep(0.2)
 
-    if not success:
-        raise RuntimeError(
-            f"Failed to capture screenshot after {max_retry} attempts. Last error: {str(last_error)}"
-        )
-
-    return save_path
+    raise RuntimeError(
+        f"Failed to capture screenshot after {max_retry} attempts. "
+        f"Last error: {last_error}"
+    )
 
 
 def start_recording(adb_path):
