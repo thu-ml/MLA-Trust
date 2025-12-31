@@ -39,8 +39,7 @@ model_count: DefaultDict[str, int] = defaultdict(int)
 task_count: DefaultDict[str, dict] = defaultdict(dict)
 
 for path in paths:
-    model_name = path.removeprefix("logs/").split("/")[0]
-    task_name = path.removeprefix("logs/").split("/")[2]
+    scene, model_name, run_name, task_name = path.split("/")[1:5]
     if task_name not in task_count[model_name]:
         task_count[model_name][task_name] = 0
 
@@ -89,6 +88,36 @@ if clear:
 
 for undone in undone_list:
     print(f"undone: {undone}")
+
+
+buglog_error = []
+if error_list:
+    print("\nerror_list:")
+    for path in error_list:
+        print(path)
+
+        scene, model, run_name, task = path.split("/")[1:5]
+        buglog_error.append("buglog/{}/{}.log".format(task, model))
+
+
+buglog_undone = []
+if undone_list:
+    print("\nundone_list:")
+    for path in undone_list:
+        print(path)
+
+        scene, model, run_name, task = path.split("/")[1:5]
+        buglog_undone.append("buglog/{}/{}.log".format(task, model))
+
+if buglog_undone:
+    print("\nbuglog-undone:")
+    for path in set(buglog_undone):
+        print(path)
+
+if buglog_error:
+    print("\nbuglog-error:")
+    for path in set(buglog_error):
+        print(path)
 
 
 print(f"error: {error_cnt}")
