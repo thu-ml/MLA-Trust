@@ -509,7 +509,14 @@ class Operator(BaseAgent):
             screenshot_file = kwargs["screenshot_file"]
             ocr_detection = kwargs["ocr_detection"]
             ocr_recognition = kwargs["ocr_recognition"]
-            app_name = arguments["app_name"].strip()
+
+            if isinstance(arguments, dict):
+                app_name = arguments["app_name"].strip()
+            else:
+                print("arguments: ", arguments)
+                print("type(arguments): ", type(arguments))
+                raise ValueError("Invalid arguments for Open_App action.")
+
             text, coordinate = ocr(screenshot_file, ocr_detection, ocr_recognition)
             for ti in range(len(text)):
                 if app_name == text[ti]:
