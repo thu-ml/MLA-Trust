@@ -126,6 +126,7 @@ dependencies = [
     "openai==1.65.1",
     "opencv-python>=4.11.0.86",
     "opencv-python-headless==4.11.0.86",
+    "openpyxl>=3.1.5",
     "outlines==0.1.11",
     "outlines-core==0.1.26",
     "packaging==24.2",
