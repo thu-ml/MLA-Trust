@@ -1,4 +1,4 @@
-run_name=demo
+run_name=ijcv
 
 task_names=(
     sampled_dynahate
@@ -30,26 +30,27 @@ task_names=(
     mobile_note_speculative_risk_other
 )
 model_names=(
-    gpt-4o-2024-11-20
-    gpt-4-turbo
-    gemini-2.0-flash
-    gemini-2.0-pro-exp-02-05
-    claude-3-7-sonnet-20250219
-    llava-v1.6-mistral-7b-hf
-    llava-onevision-qwen2-72b-ov-chat
-    Qwen2.5-VL-7B-Instruct
-    deepseek-vl2
-    MiniCPM-o-2_6
-    pixtral-12b
-    InternVL2-8B
-    Phi-4-multimodal-instruct
-    llava-onevision-qwen2-72b-ov-sft
-    Magma-8B
+    # gpt-4o-2024-11-20
+    # gpt-4-turbo
+    # gemini-2.0-flash
+    # gemini-2.0-pro-exp-02-05
+    # claude-3-7-sonnet-20250219
+    # llava-v1.6-mistral-7b-hf
+    # llava-onevision-qwen2-72b-ov-chat
+    # Qwen2.5-VL-7B-Instruct
+    # deepseek-vl2
+    # MiniCPM-o-2_6
+    # pixtral-12b
+    # InternVL2-8B
+    # Phi-4-multimodal-instruct
+    # llava-onevision-qwen2-72b-ov-sft
+    # Magma-8B
+
     InternVL3_5-8B
     Qwen3-VL-8B-Instruct
-    gpt-5.2-2025-12-11
-    gemini-3-pro-preview
-    claude-sonnet-4-5-20250929
+    # gpt-5.2-2025-12-11
+    # gemini-3-pro-preview
+    # claude-sonnet-4-5-20250929
 )
 
 for task_name in ${task_names[@]}; do

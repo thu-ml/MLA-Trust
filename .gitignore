@@ -7,3 +7,7 @@ data/web/images/
 run_task_local.sh
 data/web/images.tar
 src/scene/web/cookies/*.json
+
+.vscode/
+/plots/
+/buglog/
